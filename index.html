@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Q1></h3>
+    <p>function counter(){</p>
+   <p> var counter = 0;</p>
+
+   <p> function IncreaseCounter() {</p>
+       <p>  return counter += 1;</p>
+   <p>  };</p>
+
+   <p> return IncreaseCounter;</p>
+   <p> }</p>
+
+   <p> var counter = counter();</p>
+   <p> alert(counter());</p>
+   <p> alert(counter());</p>
+   <p> alert(counter());</p>
+   <p> alert(counter());</p>
+   <h5>Ans= 1,2,3,4</h5><hr>
+   <h3>Q2> </h3>
+   <p>let count = 0;</p>
+   <p>(function () {</p>
+    <p>if (count === 0) {</p>
+        <p> let count = 1;</p>
+        <p> console.log(count);</p>
+        <p> }</p>
+        <p>console.log(count);</p>
+        <p>})();</p>
+        <h5>line no-32=1 and lin no-34=0</h5><hr>
+        <h3>Q3.	</h3>
+        <p>"for (var i = 0; i < 3; i++) {</p>
+        <p> setTimeout(function log() {</p>
+<p>   console.log(i); // What is logged?</p>
+<p>}, 1000);</p>
+<p>}"</p>
+<h5>Ans=we are print hear answer 333, <br>why because we are give hear a condition i< 3 that mean inside the <br>if condition it will check 4 time like fist 0,second 1,third 2 fourth 3.<br>in last it will give 3 ther our condition are false but it will store the value 3<br>the speed of if stetament it faster then SetTimeout thats why it will print 333 in one millisecond.</h5><hr>
+<h3>Q4></h3>
+<p>function length(L){</p>
+    <p> function height(H){</p>
+        <p>console.log(L*H);</p>
+        <p>  }</p>
+        <p> height(10);</p>
+        <p>}</p>
+        <p> length(10);</p>
+        <h5>Ans= 100</h5><hr>
+        <h3>Q5> </h3>
+        <p>Take a variable in outer function and create an inner function to increase the counter every time it is called</p>
+        <h5>Ans= closures</h5><hr>
+        <h3>Q6></h3>
+        <p>var a = 12;</p>
+        <p>(function () {</p>
+            <p> alert(a);</p>
+            <p>})();</p>
+            <h5>Ans = come popup with value 12.</h5><hr>
+            <h3>Q7> </h3>
+            <p>var a = 10;</p>
+            <p> var x = (function () {</p>
+                <p>  var a = 12;</p>
+                <p>return function () {</p>
+                    <p>  alert(a);</p>
+                    <p> };</p>
+                    <p>   })();</p>
+                    <p>  x();</p> 
+                    <h5>Ans= come a popup and given a value  12.</h5><hr>
+                    <h3>Q8></h3>
+                    <p>var globalVar = ""xyz"";</p>
+
+                    <p> (function outerFunc(outerArg) {</p>
+                        <p> var outerVar = 'a';</p>
+                            <p>   
+                                <p> (function innerFunc(innerArg) {</p>
+                                    <p>var innerVar = 'b';</p>
+                            
+<p>console.log(</p>
+<p>   ""outerArg = "" + outerArg + ""\n"" +</p>
+<p>    ""innerArg = "" + innerArg + ""\n"" +</p>
+<p>  ""outerVar = "" + outerVar + ""\n"" +</p>
+<p>  ""innerVar = "" + innerVar + ""\n"" +</p>
+<p> ""globalVar = "" + globalVar);</p>
+                            
+     <p>})(456);</p>
+    <p>  })(123);</p>
+    <h5>Ans=outerArg = 123<br>innerArg = 456 <br>outerVar = a <br>innerVar = b<br>globalvar = xyz</h5>
+   
+</body>
+</html>
